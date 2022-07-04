@@ -24,6 +24,10 @@
                     {text}</button>
                     );
         }
+        Btn.propTypes = {
+            text: propTypes.stringisRequired,
+            fontSize : propTypes.number.isRequired
+        }
         
         
         function App() {
@@ -32,8 +36,8 @@
             
             return(
                 <div>
-                    <Btn text={value} changeValue={changeValue}/>
-                    <Btn text={value}/>
+                    <Btn text={value} changeValue={changeValue} fontSize={18}/>
+                    <Btn text={value} fontSize={18}/>
                 </div>
             );
         }
